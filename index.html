@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Grief Tracker</title>
+  <style>
+
+body {
+  font-family: monospace;
+  font-size: 16px;
+  background: #111111;
+  color: #999999;
+}
+
+@keyframes glow {
+  0% {
+    background-color: #990000;
+  }
+
+  100% {
+    background-color: #ff4444;
+  }
+}
+
+.wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gauge {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gauge-marker {
+  flex: 1;
+  background: #666;
+  height: 20px;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.gauge-marker + .gauge-marker {
+  margin-left: 10px;
+}
+
+.gauge-marker_active {
+  background: #bb3333;
+  animation: 1500ms glow ease-in-out 0s infinite alternate;
+}
+
+.center {
+  text-align: center;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <h1 class="center">Live Grief Tracker</h1>
+
+    <div class="center">
+      <p>Brad is currently experiencing:</p>
+    </div>
+
+    <h2>Stage 1. Denial.</h2>
+
+    <ol class="gauge">
+      <li class="gauge-marker gauge-marker_active"></li>
+      <li class="gauge-marker"></li>
+      <li class="gauge-marker"></li>
+      <li class="gauge-marker"></li>
+      <li class="gauge-marker"></li>
+    </ol>
+  </div>
+
+</body>
+</html>
